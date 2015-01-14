@@ -341,8 +341,9 @@ Minha inspiração é o Twitter: https://dev.twitter.com/rest/public
 
 Na minha empresa atual, fizemos algo que me orgulho muito!
 
-Adaptamos uma suite de teste que ao rodar, case o teste do endpoint da API seja "OK", então ele gera automaticamente a documentação em HTML.
-Se o teste para o endpoint falar, ele gera a documentação mas acusa falha.
+Adaptamos uma suite de teste que ao rodar, caso o teste do endpoint da API seja "OK", então ele gera automaticamente a documentação em HTML.
+
+Se o teste para o endpoint falhar, ele gera a documentação mas acusa falha.
 
 FYI: https://github.com/zipmark/rspec_api_documentation
 
