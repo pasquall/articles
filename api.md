@@ -36,7 +36,7 @@ Aí você lança na AppleStore e no GooglePlay o app "SexTape App", que se conec
 
 Aí você descobre um bug, você conserta, faz o deploy pra produção, mas há um pequeno detalhe, o `response body` de um dos endpoints agora está diferente.
 
-__!!! BANG !!!___
+__!!! BANG !!!__
 Você acabou de fazer a vida de 100000 ainda mais difícil porque o SexeTape App que eles tem instalados em seus mobiles não estão preparados para fazer o parse do novo `response body`, conclusão: __CRASH!!!__
 
 O que você faz?
@@ -179,7 +179,7 @@ Em uma tacada só você obteve o vídeo e a categoria.
 
 __!!! IMPORTANTE 2 !!!__
 
-A não ser que seja realmente necessário, não legal aninhar muitas coisas em uma request só, ela começa a ficar genérica, tão genérica que eu duvído que você vai conseguir enfiar tanta informação numa de Galaxy S5.
+A não ser que seja realmente necessário, não legal aninhar muitas coisas em uma request só, ela começa a ficar genérica, tão genérica que eu duvído que você vai conseguir enfiar tanta informação numa tela de Galaxy S5.
 
 Response Bodies muito gordo, consome tempo de requisição e de processamento durante o parse, tudo depende da situação, então você terá que ter uma balancinha pra pesar o ponto certo de enfiar mais coisas na mesma request ou não.
 
@@ -191,16 +191,16 @@ Eu gosto muito da semântica e padronização que o REST proporciona.
 
 ### Exemplos:
 
-O SexTape App que remover um vídeo.
+O SexTape App quer remover um vídeo.
 Então faz uma request com o verbo HTTP DELETE para http://api.super_sexy_tapes.com/v1/videos/1
 
-O SexTape App que adicionar um vídeo.
+O SexTape App quer adicionar um vídeo.
 Então faz uma request com o verbo HTTP POST para http://api.super_sexy_tapes.com/v1/videos?title=...
 
-O SexTape App que atualizar um vídeo.
+O SexTape App quer atualizar um vídeo.
 Então faz uma request com o verbo HTTP PATCH para http://api.super_sexy_tapes.com/v1/videos/1?title=...
 
-O SexTape App que obter detal hes de um vídeo.
+O SexTape App quer obter detalhes de um vídeo.
 Então faz uma request com o verbo HTTP GET para http://api.super_sexy_tapes.com/v1/videos/1
 
 Perceba que você possui 2 endpoints parecidos mas que tomam ações absolutamente diferentes:
@@ -213,14 +213,22 @@ O Status Code que vem na response é muitas vezes ignorado, mas ele simplesmente
 
 ### Exemplos:
 
-O SexTape App que remover um vídeo.
+O SexTape App quer remover um vídeo.
+
 Então faz uma request com o verbo HTTP DELETE para http://api.super_sexy_tapes.com/v1/videos/1
+
 Ops... vídeo não pode ser removido, porque você não ter permissão pra isso: Status Code: `403 Forbidden`
+
 Yeah... vídeo removido com sucesso: Status Code: `204 No Content`
 
-O SexTape App que adicionar um vídeo.
+
+O SexTape App quer adicionar um vídeo.
+
 Então faz uma request com o verbo HTTP POST para http://api.super_sexy_tapes.com/v1/videos?title=...
-Ops... vídeo não pode ser criado, porque você os parâmetros enviados são invalidos: Status Code: `422 Unprocessable Entity`
+
+Ops... vídeo não pode ser criado, porque você os parâmetros enviados são invalidos: Status Code: `422 Unprocessable 
+Entity`
+
 Yeah... vídeo criado com sucesso: Status Code: `200 OK`
 
 Veja essa lista de Status Codes: http://www.restapitutorial.com/httpstatuscodes.html
@@ -367,3 +375,10 @@ De acordo com as circuntâncias e na medida do possível, faça cache mobile-sid
 Eu remomendo instalar essa extensão do Google Chrome: https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm
 
 O Postman permite que você faça requisições pra sua API caso deseje utilizá-la durante o desenvolvimento ou análise de bugs.
+
+### Cases
+Api's que eu já usei e achei bem elaboradas:
+
+* http://developer.echonest.com/docs/v4
+* https://dev.twitter.com/rest/public
+* https://developers.google.com/books/docs/v1/using
