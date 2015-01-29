@@ -373,7 +373,7 @@ Se possível, faça a validação localmente, e faça a request quando há maior
 De acordo com as circuntâncias e na medida do possível, faça cache mobile-sided, e obviamente server-sided.
 
 ### Postman - REST Client
-Eu remomendo instalar essa extensão do Google Chrome: https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm
+Eu recomendo instalar essa extensão do Google Chrome: https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm
 
 O Postman permite que você faça requisições pra sua API caso deseje utilizá-la durante o desenvolvimento ou análise de bugs.
 
